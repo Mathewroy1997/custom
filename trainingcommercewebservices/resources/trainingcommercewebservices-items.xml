@@ -3,5 +3,30 @@
  Copyright (c) 2020 SAP SE or an SAP affiliate company. All rights reserved.
 -->
 <items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="items.xsd">
-	<itemtypes></itemtypes>
+    <itemtypes>
+        <typegroup name="VehicleDealership">
+
+            <itemtype code="VehicleDealershipData" autocreate="true" generate="true">
+
+                <deployment table="vehicleDealershipData" typecode="12344"/>
+                <attributes>
+                    <attribute qualifier="dealerName" type="java.lang.String">
+                        <description>Available drivers</description>
+                        <modifiers/>
+                        <persistence type="property"/>
+                    </attribute>
+
+
+                    <attribute qualifier="driverName" type="java.lang.String">
+                        <description>Available dealers</description>
+                        <modifiers/>
+                        <persistence type="property"/>
+                    </attribute>
+                </attributes>
+
+            </itemtype>
+
+
+        </typegroup>
+    </itemtypes>
 </items>
