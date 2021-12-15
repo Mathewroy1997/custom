@@ -574,4 +574,9 @@
         <property name="fieldNameProvider" ref="solrFieldNameProvider">
         </property>
     </bean>
+    <bean id="driverNameApiDao" class="de.hybris.training.core.dao.impl.DriverNameApiDaoImpl">
+        <property name="flexibleSearchService" ref="flexibleSearchService"/>
+        <property name="modelService" ref="modelService"/>
+    </bean>
+    <bean id="driverDetailsApiServices" class="de.hybris.training.core.services.DriverDetailsApiServices"></bean>
 </beans>

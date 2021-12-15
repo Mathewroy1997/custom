@@ -4,26 +4,27 @@
 --><extensioninfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="extensioninfo.xsd">
         	
     
-    <extension abstractclassprefix="Generated" classprefix="Ycommercewebservices" name="trainingcommercewebservices" usemaven="false">
-                		
-        
+    <extension abstractclassprefix="Generated" classprefix="Ycommercewebservices" name="trainingcommercewebservices"
+               usemaven="false">
+
+
         <requires-extension name="commercefacades"/>
-                		
-        
+
+
         <requires-extension name="commercewebservicescommons"/>
-                		
-        
+
+
         <requires-extension name="ordermanagementfacades"/>
-                		
-        
-        <coremodule generated="true" manager="de.hybris.platform.jalo.extension.GenericManager" packageroot="org.training"/>
-                		
-        
+
+        <requires-extension name="trainingfacades"></requires-extension>
+
+        <coremodule generated="true" manager="de.hybris.platform.jalo.extension.GenericManager"
+                    packageroot="org.training"/>
+
+
         <webmodule jspcompile="false" webroot="/trainingcommercewebservices"/>
-                		
-        
-        		
-        
+
+
         <meta key="modulegen-name" value="commercewebservices"/>
                 	
     

@@ -247,14 +247,22 @@
 
 	<bean id="returnRequestFieldMapper" parent="fieldMapper">
 		<property name="sourceClass"
-				  value="de.hybris.platform.ordermanagementfacades.returns.data.ReturnRequestData"/>
-		<property name="destClass"
-				  value="de.hybris.platform.commercewebservicescommons.dto.order.ReturnRequestWsDTO"/>
-		<property name="fieldMapping">
-			<map>
-				<entry key="total" value="totalPrice"/>
-				<entry key="subtotal" value="subTotal"/>
-			</map>
-		</property>
-	</bean>
+                  value="de.hybris.platform.ordermanagementfacades.returns.data.ReturnRequestData"/>
+        <property name="destClass"
+                  value="de.hybris.platform.commercewebservicescommons.dto.order.ReturnRequestWsDTO"/>
+        <property name="fieldMapping">
+            <map>
+                <entry key="total" value="totalPrice"/>
+                <entry key="subtotal" value="subTotal"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="driverBaseFieldMapper" parent="fieldMapper">
+        <property name="sourceClass" value="de.hybris.platform.commercefacades.driverDetails.data.DriverData"/>
+        <property name="destClass"
+                  value="de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresWSDTO"/>
+    </bean>
+
+
 </beans>

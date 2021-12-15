@@ -1586,4 +1586,17 @@
         </property>
     </bean>
 
+    <bean parent="fieldSetLevelMapping" id="driverBaseDataWSDTOFieldSetLevelMapping">
+
+        <property name="dtoClass"
+                  value="de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresWSDTO"/>
+        <property name="LevelMapping">
+            <map>
+                <entry key="BASIC" value="driverName,driverExperience,driverId"/>
+                <entry key="DEFAULT" value="driverName,driverExperience,driverId"/>
+                <entry key="FULL" value="driverName,driverExperience,driverId"/>
+            </map>
+        </property>
+    </bean>
+
 </beans>

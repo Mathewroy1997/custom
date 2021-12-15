@@ -19,6 +19,11 @@
 		<property name="dealerName" type="String"/>
 	</bean>-->
 	<!--	java.util.List&lt;de.hybris.training.facades.product.data.Dealer-->
+<bean class="de.hybris.platform.commercefacades.driverDetails.data.DriverData">
 
+	<property name="driverName" type="String"/>
+	<property name="driverId" type="String"/>
+	<property name="driverExperience" type="java.lang.Integer"/>
+</bean>
 
 </beans>

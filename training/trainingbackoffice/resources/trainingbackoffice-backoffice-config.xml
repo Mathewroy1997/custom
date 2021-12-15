@@ -265,7 +265,7 @@
                 </wz:content>
                 <wz:navigation id="step1.navigation">
                     <wz:cancel/>
-                    <!--<wz:next visible="!#empty(newDriver.driverId) and (newDriver.nameOfDriver!=null)"/>-->
+
                     <wz:done visible="!#empty(newDriver.driverId) and newDriver.driverName!=null">
                         <wz:save property="newDriver"/>
                     </wz:done>
@@ -292,7 +292,7 @@
                 </wz:content>
                 <wz:navigation id="step1.navigation">
                     <wz:cancel/>
-                    <!--<wz:next visible="!#empty(newDriver.driverId) and (newDriver.nameOfDriver!=null)"/>-->
+
                     <wz:done visible="!#empty(newDealer.dealerId) and newDealer.dealerName!=null">
                         <wz:save property="newDealer"/>
                     </wz:done>
