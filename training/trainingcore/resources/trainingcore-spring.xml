@@ -569,14 +569,24 @@
         <property name="fieldNameProvider" ref="solrFieldNameProvider">
         </property>
     </bean>
-    <bean id="DealerValueProvider"
-          class="de.hybris.training.core.search.solrfacetsearch.provider.impl.DealerValueProvider">
-        <property name="fieldNameProvider" ref="solrFieldNameProvider">
-        </property>
-    </bean>
-    <bean id="driverNameApiDao" class="de.hybris.training.core.dao.impl.DriverNameApiDaoImpl">
-        <property name="flexibleSearchService" ref="flexibleSearchService"/>
-        <property name="modelService" ref="modelService"/>
-    </bean>
-    <bean id="driverDetailsApiServices" class="de.hybris.training.core.services.DriverDetailsApiServices"></bean>
+	<bean id="DealerValueProvider"
+		  class="de.hybris.training.core.search.solrfacetsearch.provider.impl.DealerValueProvider">
+		<property name="fieldNameProvider" ref="solrFieldNameProvider">
+		</property>
+	</bean>
+	<bean id="driverNameApiDao" class="de.hybris.training.core.dao.impl.DriverNameApiDaoImpl">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+		<property name="modelService" ref="modelService"/>
+	</bean>
+	<bean id="driverDetailsApiServices" class="de.hybris.training.core.services.DriverDetailsApiServices"></bean>
+
+
+	<bean id="dealerApiDao"
+		  class="de.hybris.training.core.dao.impl.DealerApiDaoImpl">
+		<property name="flexibleSearchService" ref="flexibleSearchService"/>
+		<property name="modelService" ref="modelService"/>
+
+	</bean>
+	<bean id="dealerDetailsApiServices" class="de.hybris.training.core.services.DealerDetailsApiServices"></bean>
+
 </beans>

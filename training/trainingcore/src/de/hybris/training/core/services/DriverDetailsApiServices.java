@@ -14,4 +14,9 @@ public class DriverDetailsApiServices {
         final List<DriverModel> driverModels = driverNameApiDao.getDriverDetailsByName(driverName);
         return driverModels;
     }
+
+    public List<DriverModel> getAllDriverDetails() {
+        final List<DriverModel> storeModels = driverNameApiDao.getDriverDetails();
+        return storeModels;
+    }
 }

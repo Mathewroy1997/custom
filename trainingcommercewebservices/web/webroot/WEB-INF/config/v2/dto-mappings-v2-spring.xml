@@ -253,16 +253,22 @@
         <property name="fieldMapping">
             <map>
                 <entry key="total" value="totalPrice"/>
-                <entry key="subtotal" value="subTotal"/>
-            </map>
-        </property>
-    </bean>
+				<entry key="subtotal" value="subTotal"/>
+			</map>
+		</property>
+	</bean>
 
-    <bean id="driverBaseFieldMapper" parent="fieldMapper">
-        <property name="sourceClass" value="de.hybris.platform.commercefacades.driverDetails.data.DriverData"/>
-        <property name="destClass"
-                  value="de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresWSDTO"/>
-    </bean>
+	<bean id="driverBaseFieldMapper" parent="fieldMapper">
+		<property name="sourceClass" value="de.hybris.platform.commercefacades.driverDetails.data.DriverData"/>
+		<property name="destClass"
+				  value="de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresWSDTO"/>
+	</bean>
+
+	<bean id="dealerBaseFieldMapper" parent="fieldMapper">
+		<property name="sourceClass" value="de.hybris.platform.commercefacades.dealerDetails.data.DealerData"/>
+		<property name="destClass"
+				  value="de.hybris.platform.commercewebservicescommons.dto.dealerstores.DealerStoresWSDTO"/>
+	</bean>
 
 
 </beans>

@@ -15,7 +15,7 @@ public class DriverNameApiDaoImpl extends AbstractItemDao implements DriverNameA
 
     private static final Logger LOGGER = Logger.getLogger(DriverNameApiDaoImpl.class);
     private static final String STORE_QUERY = "SELECT {" + DriverModel.PK + "} FROM{" + DriverModel._TYPECODE + "} WHERE {" + DriverModel.DRIVERNAME + "}= ?driverName ";
-
+    private static final String STORE_QUERY2 = "SELECT {pk} FROM {Driver}";
 
     @Override
     public List<DriverModel> getDriverDetailsByName(String driverName) {
@@ -26,6 +26,13 @@ public class DriverNameApiDaoImpl extends AbstractItemDao implements DriverNameA
         LOGGER.info(getFlexibleSearchService().search(STORE_QUERY, params
         ).getClass());
         final SearchResult<DriverModel> stores = getFlexibleSearchService().search(STORE_QUERY, params);
+        return stores.getResult() == null ? Collections.emptyList() : stores.getResult();
+    }
+
+    @Override
+    public List<DriverModel> getDriverDetails() {
+
+        final SearchResult<DriverModel> stores = getFlexibleSearchService().search(STORE_QUERY2);
         return stores.getResult() == null ? Collections.emptyList() : stores.getResult();
     }
 }

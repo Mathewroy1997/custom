@@ -172,6 +172,7 @@
 		<property name="pagination" type="de.hybris.platform.commerceservices.search.pagedata.PaginationData"/>
 	</bean>
 
+
 	<bean class="de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresDataListWSDTO">
 		<property name="driverstores"
 				  type="java.util.List&lt;de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresWSDTO>"/>
@@ -180,15 +181,40 @@
 		<property name="driverstores"
 				  type="java.util.List&lt;de.hybris.platform.commercefacades.driverDetails.data.DriverData>"/>
 	</bean>
+
 	<bean class="de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresAllDataListWSDTO">
 		<property name="driverstores"
 				  type="java.util.List&lt;de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresWSDTO>"/>
 	</bean>
+
 
 	<bean class="de.hybris.platform.commercewebservicescommons.dto.driverstores.DriverStoresWSDTO">
 		<property name="driverName" type="String"/>
 		<property name="driverExperience" type="java.lang.Integer"/>
 		<property name="driverId" type="String"/>
 	</bean>
+
+
+	<bean class="de.hybris.platform.commercewebservicescommons.dto.dealerstores.DealerStoresDataListWSDTO">
+		<property name="dealerstores"
+				  type="java.util.List&lt;de.hybris.platform.commercewebservicescommons.dto.dealerstores.DealerStoresWSDTO>"/>
+	</bean>
+	<bean class="de.hybris.training.queues.data.DealerStoresDataList">
+		<property name="dealerstores"
+				  type="java.util.List&lt;de.hybris.platform.commercefacades.dealerDetails.data.DealerData>"/>
+	</bean>
+
+	<bean class="de.hybris.platform.commercewebservicescommons.dto.dealerstores.DealerStoresAllDataListWSDTO">
+		<property name="dealerstores"
+				  type="java.util.List&lt;de.hybris.platform.commercewebservicescommons.dto.dealerstores.DealerStoresWSDTO>"/>
+	</bean>
+
+
+	<bean class="de.hybris.platform.commercewebservicescommons.dto.dealerstores.DealerStoresWSDTO">
+		<property name="dealerName" type="String"/>
+		<property name="dealerAddress" type="String"/>
+		<property name="dealerId" type="String"/>
+	</bean>
+
 
 </beans>

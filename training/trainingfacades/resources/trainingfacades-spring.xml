@@ -219,4 +219,24 @@
 
 	<bean id="driverDataPopulator" class="de.hybris.training.facades.populators.DriverDataPopulator"/>
 
+	<alias name="dealerFacadeImpl" alias="dealerFacadeImpl"/>
+	<bean id="dealerFacadeImpl"
+		  class="de.hybris.training.facades.dealerFacade.impl.DealerFacadeImpl">
+		<property name="storeconverter" ref="storeconverter"/>
+		<property name="dealerDetailsApiServices" ref="dealerDetailsApiServices"/>
+	</bean>
+
+	<alias name="storeconverter" alias="storeconverter"/>
+	<bean id="storeconverter" parent="abstractPopulatingConverter">
+		<property name="targetClass" value="de.hybris.platform.commercefacades.dealerDetails.data.DealerData"/>
+		<property name="populators">
+			<list>
+				<ref bean="dealerApiDataPopulator"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="dealerApiDataPopulator" class="de.hybris.training.facades.populators.DealerApiDataPopulator"/>
+
+
 </beans>

@@ -1599,4 +1599,18 @@
         </property>
     </bean>
 
+    <bean parent="fieldSetLevelMapping" id="dealerBaseDataWSDTOFieldSetLevelMapping">
+
+        <property name="dtoClass"
+                  value="de.hybris.platform.commercewebservicescommons.dto.dealerstores.DealerStoresWSDTO"/>
+        <property name="LevelMapping">
+            <map>
+                <entry key="BASIC" value="dealerName,dealerAddress,dealerId"/>
+                <entry key="DEFAULT" value="dealerName,dealerAddress,dealerId"/>
+                <entry key="FULL" value="dealerName,dealerAddress,dealerId"/>
+            </map>
+        </property>
+    </bean>
+
+
 </beans>

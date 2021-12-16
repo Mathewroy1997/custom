@@ -9,4 +9,5 @@ public interface DriverFacadeInter {
 
     public List<DriverData> getDriverDetails(final String driverName);
 
+    public List<DriverData> getAllDriverDetails();
 }

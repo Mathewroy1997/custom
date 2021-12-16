@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface DriverNameApiDao {
     List<DriverModel> getDriverDetailsByName(String driverName);
+
+    List<DriverModel> getDriverDetails();
 }

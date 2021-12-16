@@ -24,6 +24,14 @@ public class DriverFacadeImpl implements DriverFacadeInter {
     private DriverDetailsApiServices driverDetailsApiServices;
     private Converter<DriverModel, DriverData> storesconverter;
 
+    public Converter<DriverModel, DriverData> getStoresconverter() {
+        return storesconverter;
+    }
+
+    public void setStoresconverter(Converter<DriverModel, DriverData> storesconverter) {
+        this.storesconverter = storesconverter;
+    }
+
 
     @Override
     public List<DriverData> getDriverDetails(final String driverName) {
@@ -34,12 +42,12 @@ public class DriverFacadeImpl implements DriverFacadeInter {
         return Converters.convertAll(driverDataModel, getStoresconverter());
     }
 
-    public Converter<DriverModel, DriverData> getStoresconverter() {
-        return storesconverter;
-    }
 
-    public void setStoresconverter(Converter<DriverModel, DriverData> storesconverter) {
-        this.storesconverter = storesconverter;
+    @Override
+    public List<DriverData> getAllDriverDetails() {
+        final List<DriverModel> driverBaseDataModel = driverDetailsApiServices.getAllDriverDetails();
+
+        return Converters.convertAll(driverBaseDataModel, getStoresconverter());
     }
 }
 
