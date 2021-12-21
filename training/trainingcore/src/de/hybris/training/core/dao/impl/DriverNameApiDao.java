@@ -8,4 +8,6 @@ public interface DriverNameApiDao {
     List<DriverModel> getDriverDetailsByName(String driverName);
 
     List<DriverModel> getDriverDetails();
+
+    public List<DriverModel> removeDriver(String driverName);
 }

@@ -35,4 +35,11 @@ public class DriverNameApiDaoImpl extends AbstractItemDao implements DriverNameA
         final SearchResult<DriverModel> stores = getFlexibleSearchService().search(STORE_QUERY2);
         return stores.getResult() == null ? Collections.emptyList() : stores.getResult();
     }
+
+    @Override
+    public List<DriverModel> removeDriver(String driverName) {
+        final SearchResult<DriverModel> stores = getFlexibleSearchService().search("SELECT * FROM {Driver} WHERE {driverName}='" + driverName + "'");
+        return stores.getResult() == null ? Collections.emptyList() : stores.getResult();
+
+    }
 }

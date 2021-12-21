@@ -49,6 +49,11 @@ public class DriverFacadeImpl implements DriverFacadeInter {
 
         return Converters.convertAll(driverBaseDataModel, getStoresconverter());
     }
+
+    @Override
+    public void removeDriver(String driverName) {
+        driverDetailsApiServices.removeDriver(driverName);
+    }
 }
 
 
